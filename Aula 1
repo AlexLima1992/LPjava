@@ -28,3 +28,52 @@ public class Main {
         nome = sc.nextLine();
         System.out.println("Digite o seu idade: ");
         idade = sc.nextInt();
+
+
+#EXERCICIO 2 #
+
+
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        int idade;
+        int num1;
+        int num2;
+        int soma;
+        int subtracao;
+        int multiplicacao;
+        int divisao;
+        int media;
+        String nome;
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o seu nome: ");
+        nome = sc.nextLine();
+        System.out.println("Digite o seu idade: ");
+        idade = sc.nextInt();
+        System.out.println("Digite o um primeiro numero: ");
+        num1 = sc.nextInt();
+        System.out.println("Digite o um segundo numero: ");
+        num2 = sc.nextInt();
+
+        soma=num1+num2;
+        subtracao=num1-num2;
+        multiplicacao=num1*num2;
+        divisao=num1/num2;
+        media=soma+subtracao+multiplicacao;
+
+        System.out.println("A soma é "+soma);
+        System.out.println("A subtração é "+subtracao);
+        System.out.println("A multiplicação é "+multiplicacao);
+        System.out.println("A divisão é "+divisao);
+        System.out.println("A media é "+media);
+        System.out.println();
