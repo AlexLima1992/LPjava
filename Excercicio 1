@@ -1,0 +1,126 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        // Exercico 1  Digite seu nome//
+
+        System.out.println("Olá Alexandre!");
+
+
+        // Exercicio 2 Soma entre 2 numeros//
+        Scanner sc = new Scanner(System.in);
+        int soma;
+        int numero1;
+        int numero2;
+
+        System.out.println("Digite o um primeiro numero: ");
+        numero1 = sc.nextInt();
+        System.out.println("Digite o um segundo numero: ");
+        numero2 = sc.nextInt();
+        soma=numero1+numero2;
+        System.out.println("A soma é "+soma);
+        System.out.println();
+
+
+        // Exercício 3 Calculo da Area do Retangulo//
+        int base;
+        int altura;
+        double area;
+
+        System.out.println("Vamos Calcular a àrea de um retangulo \nDigite a base: ");
+        base = sc.nextInt();
+        System.out.println("Agora digite a altura: ");
+        altura = sc.nextInt();
+        area= base*altura;
+        System.out.println("A área do retângulo é: "+area);
+        System.out.println();
+
+        // Exercício 4  Média Aritimética //
+        double media;
+        int numeroX;
+        int numeroY;
+        int numeroZ;
+
+        System.out.println("Vamos Caldular a Média de 3 numeros \nDigite o um primeiro numero: ");
+        numeroX = sc.nextInt();
+        System.out.println("Digite o um segundo numero: ");
+        numeroY = sc.nextInt();
+        System.out.println("Digite o um terceiro numero: ");
+        numeroZ = sc.nextInt();
+        media=(numeroX+numeroY+numeroZ) / 3;
+        System.out.println("A media é "+media);
+        System.out.println();
+
+        // Exercicio 5  De métros para Centimetros //
+
+        double metros;
+        double convercao;
+
+        System.out.println("Vamos fazer a conversão de Metros para Centrimetros \nDigite o o valor do metro: ");
+        metros = sc.nextInt();
+        convercao=(metros*100);
+        System.out.println("O Valor de " +metros+"m"+" em Centrimentos é: "+convercao+"cm");
+
+        // Exercicio 6 - Calcular o Perímetro do Quadrado//
+
+        Scanner sc = new Scanner(System.in);
+        int lado;
+        int perimetro;
+
+        System.out.println("Vamos Calcular o Perímetro de um quadrado: \nDigite o valor do lado: ");
+        lado = sc.nextInt();
+        perimetro = lado * 4;
+        System.out.println("O perimetro é "+perimetro);
+        System.out.println();
+
+        // Exercicio 7 Distancia entre 2 pontos //
+
+
+        int x;
+        int y;
+
+
+        // Exercicio 8 - Volume do CUBO//
+        int aresta;
+        int volume;
+
+        System.out.println("Agora vamos Calcular o Volume de um CUBO: \nDigite o valor da aresta: ");
+        aresta = sc.nextInt();
+        volume = (int) Math.pow(aresta, 3);
+        System.out.println("O volume é "+volume);
+        System.out.println();
+
+        // Exercico 9 Velocidade Média
+
+        double distancia;
+        double tempo;
+        double velocidademedia;
+
+        System.out.println("Agora vamos Calcular o velocidade média precorrida: \nDigite o a distancia percorrida em Km/h: ");
+        distancia = sc.nextInt();
+        System.out.println("Digite o tempo gasto em horas: ");
+        tempo = sc.nextInt();
+        velocidademedia = distancia / tempo;
+        System.out.println("A velocidade média é "+velocidademedia+" km/h");
+        System.out.println();
+
+        // Exercicio 10 - Cálculo do Dollar
+
+        double real;
+        double dollar;
+
+        System.out.println("Agora vamos converter Reais em Dollar: \nDigite o valor em Reais: ");
+        real = sc.nextInt();
+        dollar = real / 5.92;
+        System.out.println("O valor de R$"+real+" reais em Dollar e: " +dollar +" US$");
+        System.out.println();
+
+
+
+        }
+    }
