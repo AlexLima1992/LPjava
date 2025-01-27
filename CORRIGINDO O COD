@@ -1,0 +1,43 @@
+// Código:
+public class AtividadeErros {
+
+public static void main(String args) {
+System.out.printl("Encontre os erros neste código!");
+
+int numero1 = 10
+int numero2 = 5.0;
+
+int soma = numero1 + numero2
+System.out.println("A soma de " + numero1 " e " + numero2 + " é: " + soma)
+
+double raizQuadrada = Math.sqrt(numero1);
+System.out.println("A raiz quadrada de + numero1 + é: + raizQuadrada);
+
+int resultado = numero1 / 0;
+System.out.println("O resultado da divisão é: " + resultado)
+}
+}
+
+// CORREÇÃO DO COD 
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Encontre os erros neste código!");
+
+                double numero1 = 10;
+                double numero2 = 5.0;
+
+                double soma = numero1 + numero2;
+                System.out.println("A soma de " + numero1+ " e " + numero2 + " é: " + soma);
+
+                double raizQuadrada = Math.sqrt(numero1);
+                System.out.println("A raiz quadrada de " + numero1 + " é: " + raizQuadrada);
+
+                double resultado = numero1/ 0;
+                System.out.println("O resultado da divisão é: " + resultado);
+            }
+        }
