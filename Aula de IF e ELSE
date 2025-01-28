@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        Scanner sc = new Scanner(System.in);
+        int numero1;
+        System.out.println("Digite o um primeiro numero: ");
+        numero1 = sc.nextInt();
+
+        if (numero1 % 2 == 0) { 
+            System.out.println("Par");
+
+// NESTA FUNÇÃO % SIGNIFICA SE O NUMERO DIVIDIDO POR 2  SOBRAR 0, 
+// OU SEJA, UM NUIMERO INTEIRO, ENTÃO ELE É PAR, SE O NUMERO DIGITADO 
+// NÃO SOBRAR UM INTEIRO, ENTÃO ELE É IMPAR
+
+        }
+        else {
+            System.out.println("Impar"); ;
+        }
+
+    }
+}
+
+// Exercicio 2 
+        Scanner sc = new Scanner(System.in);
+        double numero1;
+        System.out.println("Digite o um primeiro numero: ");
+        numero1 = sc.nextInt();
+
+        if (numero1 > 0) {
+            System.out.println("POSITIVO");
+        }
+        if (numero1 == 0){
+            System.out.println("ZERO");
+                          }
+        if (numero1 < 0){
+            System.out.println("NEGATIVO"); 
+
