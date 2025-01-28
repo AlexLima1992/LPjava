@@ -42,3 +42,264 @@ public class Main {
         if (numero1 < 0){
             System.out.println("NEGATIVO"); 
 
+// Exercicio 3
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        Scanner sc = new Scanner(System.in);
+        double numero1;
+        double numero2;
+
+        System.out.println("Digite o um primeiro numero: ");
+        numero1 = sc.nextInt();
+        System.out.println("Digite o um segundo numero: ");
+        numero2 = sc.nextInt();
+
+        if (numero1 > numero2) {
+            System.out.println("Numero "+numero1 + " é o numero maior");
+        }
+        if (numero1 < numero2){
+            System.out.println("Numero "+numero2 + " é o numero maior");
+                          }
+
+    }
+}
+
+// Exercicio 4
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        // Exercicio 2
+        Scanner sc = new Scanner(System.in);
+        int nota1;
+
+        System.out.println("Digite a nota: ");
+        nota1 = sc.nextInt();
+
+        if (nota1 >= 7) {
+            System.out.println("APROVADO");
+        }
+        else {
+            System.out.println("REPROVADO");
+                          }
+    }
+}
+
+// Exercicio 5 
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        Scanner sc = new Scanner(System.in);
+        int lado1;
+        int lado2;
+        int lado3;
+
+        System.out.println("Digite o lado 1: ");
+        lado1 = sc.nextInt();
+        System.out.println("Digite o lado 2: ");
+        lado2 = sc.nextInt();
+        System.out.println("Digite o lado 3: ");
+        lado3 = sc.nextInt();
+
+        if (lado1 > lado2 && lado1 > lado3) {
+            System.out.println("É UM TRIANGULO ");
+        }
+        else {
+            System.out.println("NÃO É UM TRIANGULO ");
+                          }
+    }
+}
+
+// Execicio 6
+import java.util.Scanner;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // Solicita o primeiro número
+        System.out.print("Digite o primeiro número: ");
+        double numero1 = sc.nextDouble();
+
+        // Solicita o operador
+        System.out.print("Digite o operador (+, -, *, /): ");
+        char operador = sc.next().charAt(0);
+
+        // Solicita o segundo número
+        System.out.print("Digite o segundo número: ");
+        double numero2 = sc.nextDouble();
+
+        double resultado = 0;
+
+        // Realiza a operação correspondente
+        switch (operador) {
+            case '+':
+                resultado = numero1 + numero2;
+                break;
+            case '-':
+                resultado = numero1 - numero2;
+                break;
+            case '*':
+                resultado = numero1 * numero2;
+                break;
+            case '/':
+                // Verifica se o segundo número é zero para evitar divisão por zero
+                if (numero2 != 0) {
+                    resultado = numero1 / numero2;
+                } else {
+                    System.out.println("Erro: Divisão por zero não é permitida.");
+                    return; // Encerra o programa
+                }
+                break;
+            default:
+                System.out.println("Operador inválido.");
+                return; // Encerra o programa
+        }
+
+        // Exibe o resultado
+        System.out.println("Resultado: " + resultado);
+
+        sc.close();
+    }
+}
+
+// Exercicio 7
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um número de 1 a 7: ");
+        int dia = sc.nextInt();
+
+        if (dia == 1) {
+            System.out.println("Domingo");
+        } else if (dia == 2) {
+            System.out.println("Segunda");
+        } else if (dia == 3) {
+            System.out.println("Terça");
+        } else if (dia == 4) {
+            System.out.println("Quarta");
+        } else if (dia == 5) {
+            System.out.println("Quinta");
+        } else if (dia == 6) {
+            System.out.println("Sexta");
+        } else if (dia == 7) {
+            System.out.println("Sábado");
+        } else {
+            System.out.println("Número inválido!");
+        }
+
+        sc.close();
+    }
+}
+
+// Exercicio 8
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número de 1 a 12: ");
+        int mes = scanner.nextInt();
+
+        if (mes == 1) {
+            System.out.println("Janeiro");
+        } else if (mes == 2) {
+            System.out.println("Fevereiro");
+        } else if (mes == 3) {
+            System.out.println("Março");
+        } else if (mes == 4) {
+            System.out.println("Abril");
+        } else if (mes == 5) {
+            System.out.println("Maio");
+        } else if (mes == 6) {
+            System.out.println("Junho");
+        } else if (mes == 7) {
+            System.out.println("Julho");
+        } else if (mes == 8) {
+            System.out.println("Agosto");
+        } else if (mes == 9) {
+            System.out.println("Setembro");
+        } else if (mes == 10) {
+            System.out.println("Outubro");
+        } else if (mes == 11) {
+            System.out.println("Novembro");
+        } else if (mes == 12) {
+            System.out.println("Dezembro");
+        } else {
+            System.out.println("Número inválido!");
+        }
+
+        scanner.close();
+    }
+}
+
+// Exercicio 9
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o primeiro lado: ");
+        double lado1 = scanner.nextDouble();
+        System.out.print("Digite o segundo lado: ");
+        double lado2 = scanner.nextDouble();
+        System.out.print("Digite o terceiro lado: ");
+        double lado3 = scanner.nextDouble();
+
+        if (lado1 == lado2 && lado2 == lado3) {
+            System.out.println("Triângulo Equilátero");
+        } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+            System.out.println("Triângulo Isósceles");
+        } else {
+            System.out.println("Triângulo Escaleno");
+        }
+        scanner.close();
+    }
+}
+
+//EXERCICIO 10
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o peso (em kg): ");
+        double peso = scanner.nextDouble();
+        System.out.print("Digite a altura (em cm): ");
+        double alturaCm = scanner.nextDouble();
+
+        // Converte altura de cm para metros
+        double alturaMetros = alturaCm / 100;
+
+        // Calcula o IMC
+        double imc = peso / (alturaMetros * alturaMetros);
+        System.out.printf("Seu IMC é: %.2f%n", imc);
+
+        // Classifica o IMC
+        if (imc < 18.5) {
+            System.out.println("Classificação: Magreza");
+        } else if (imc < 24.9) {
+            System.out.println("Classificação: Normal");
+        } else if (imc < 29.9) {
+            System.out.println("Classificação: Sobrepeso");
+        } else {
+            System.out.println("Classificação: Obesidade");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+
