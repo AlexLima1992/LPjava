@@ -1,0 +1,230 @@
+// Exercicio 1 - 
+
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que insira um número inteiro positivo
+        System.out.print("Digite um número inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        // Verifica se o número é positivo
+        if (numero <= 0) {
+            System.out.println("Por favor, insira um número inteiro positivo.");
+        } else {
+            // Inicializa a variável de controle do loop
+            int contador = 1;
+
+            // Usa o loop while para imprimir os números de 1 até o número digitado
+            while (contador <= numero) {
+                System.out.println(contador);
+                contador++;
+            }
+        }
+
+        // Fecha o Scanner para liberar recursos
+        scanner.close();
+    }
+}
+
+// EXERCICIO 2 
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        // Solicita ao usuário que insira um número inteiro positivo
+        System.out.print("Digite um número inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        // Verifica se o número é positivo
+        if (numero <= 0) {
+            System.out.println("Por favor, insira um número inteiro positivo.");
+        } else {
+            // Inicializa a variável para armazenar a soma
+            int soma = 0;
+
+            // Usa o loop for para calcular a soma dos números de 1 até o número digitado
+            for (int i = 1; i <= numero; i++) {
+                soma += i;
+            }
+
+            // Exibe o resultado
+            System.out.println("A soma de todos os números de 1 até " + numero + " é: " + soma);
+        }
+
+        // Fecha o Scanner para liberar recursos
+        scanner.close();
+    }
+}
+
+// EXERCICIO 3 
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que insira um número inteiro positivo
+        System.out.print("Digite um número inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        // Inicializa os dois primeiros números da sequência de Fibonacci
+        int anterior = 0;
+        int atual = 1;
+
+        // Imprime os dois primeiros números da sequência
+        System.out.print("Sequência de Fibonacci até " + numero + ": " + anterior + ", " + atual);
+
+        // Usa o loop do-while para gerar a sequência de Fibonacci
+        do {
+            int proximo = anterior + atual; // Calcula o próximo número da sequência
+            if (proximo > numero) { // Verifica se o próximo número ultrapassa o limite
+                break; // Sai do loop se ultrapassar
+            }
+            System.out.print(", " + proximo); // Imprime o próximo número
+            anterior = atual; // Atualiza o valor anterior
+            atual = proximo; // Atualiza o valor atual
+        } while (atual <= numero); // Continua enquanto o número atual for menor ou igual ao número digitado
+
+        // Fecha o Scanner para liberar recursos
+        scanner.close();
+    }
+}
+
+// EXERCICIO 4
+
+// Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que insira um número inteiro
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        // Variável para armazenar se o número é primo
+        boolean ehPrimo = true;
+
+        // Verifica se o número é primo usando o loop for
+        for (int i = 2; i <= numero / 2; i++) {
+            if (numero % i == 0) { // Se o número for divisível por i, não é primo
+                ehPrimo = false;
+                break; // Sai do loop
+            }
+        }
+
+        // Exibe o resultado
+        if (numero > 1 && ehPrimo) {
+            System.out.println(numero + " é um número primo.");
+        } else {
+            System.out.println(numero + " não é um número primo.");
+        }
+
+        // Fecha o Scanner para liberar recursos
+        scanner.close();
+    }
+}
+
+// EXERCICIO 5
+
+// Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita que insira o numero inteiro
+        System.out.println("Digite um numero inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        // Inicia a variaval de loop
+        int divisor = 1;
+
+        // usa while pra encontrar e imprimir os divisores
+        System.out.println("Divisores de "+ numero+ ":");
+        while (divisor <= numero) {
+            if (numero % divisor == 0) {
+                System.out.println(divisor + " ");
+            }
+            divisor++; // coloca o divisor
+
+        }
+        scanner.close();
+
+    }
+}
+
+// EXERCICO 6
+public class Main {
+    public static void main(String[] args) {
+
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita que insira o numero inteiro
+        System.out.println("Digite um numero inteiro positivo: ");
+        int numero = scanner.nextInt();
+
+        double x  = numero / 2; // Estimativa inicial
+        double precisão = 0.0001;
+
+        while (true){
+            double x_novo = (x + numero / x) / 2;
+            if (Math.abs(x_novo - x) < precisão) {
+                break;
+
+            }
+            x = x_novo;
+        }
+        System.out.println("A raiz quadrada de "+numero + " é: "+x);
+        scanner.close();
+
+    }
+}
+
+// EXERCICIO 7
+public class Main {
+    public static void main(String[] args) {
+
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Variáveis para armazenar a soma e a quantidade de números digitados
+        int soma = 0;
+        int quantidade = 0;
+
+        // Loop para ler os números
+        while (true) {
+            System.out.print("Digite um número inteiro (ou um número negativo para parar): ");
+            int numero = scanner.nextInt();
+
+            // Verifica se o número é negativo
+            if (numero < 0) {
+                break; // Sai do loop se o número for negativo
+            }
+
+            // Atualiza a soma e a quantidade de números
+            soma += numero;
+            quantidade++;
+        }
+
+        // Verifica se pelo menos um número foi digitado
+        if (quantidade > 0) {
+            // Calcula a média
+            double media = (double) soma / quantidade;
+            System.out.println("A média dos números digitados é: " + media);
+        } else {
+            System.out.println("Nenhum número válido foi digitado.");
+        }
+
+        // Fecha o Scanner para liberar recursos
+        scanner.close();
+    }
+}
+
+
+
+
