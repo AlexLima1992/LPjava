@@ -225,6 +225,131 @@ public class Main {
     }
 }
 
+// Exercícío 8
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        char operador;
+        double num1, num2, resultado;
+
+        do {
+            // Solicita o operador ao usuário
+            System.out.print("Digite o operador (+, -, *, /) ou 's' para sair: ");
+            operador = scanner.next().charAt(0);
+
+            // Verifica se o usuário deseja sair
+            if (operador == 's' || operador == 'S') {
+                System.out.println("Saindo da calculadora...");
+                break;
+            }
+
+            // Solicita os números ao usuário
+            System.out.print("Digite o primeiro número: ");
+            num1 = scanner.nextDouble();
+            System.out.print("Digite o segundo número: ");
+            num2 = scanner.nextDouble();
+
+            // Realiza a operação com base no operador fornecido
+            if (operador == '+') {
+                resultado = num1 + num2;
+            } else if (operador == '-') {
+                resultado = num1 - num2;
+            } else if (operador == '*') {
+                resultado = num1 * num2;
+            } else if (operador == '/') {
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                } else {
+                    System.out.println("Erro: Divisão por zero!");
+                    continue; // Volta ao início do loop
+                }
+            } else {
+                System.out.println("Operador inválido! Tente novamente.");
+                continue; // Volta ao início do loop
+            }
+
+            // Exibe o resultado da operação
+            System.out.println("Resultado: " + resultado + "\n");
+
+        } while (true); // Loop infinito até que o usuário escolha sair
+
+        scanner.close();
+    }
+}
+
+//Exercicio 9
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário o número de linhas
+        System.out.print("Digite o número de linhas (N): ");
+        int N = scanner.nextInt();
+
+        // Verifica se o número é positivo
+        if (N <= 0) {
+            System.out.println("Por favor, insira um número inteiro positivo.");
+        } else {
+            // Loop para imprimir o triângulo retângulo
+            for (int i = 1; i <= N; i++) { // Controla o número de linhas
+                for (int j = 1; j <= i; j++) { // Controla o número de asteriscos por linha
+                    System.out.print("*");
+                }
+                System.out.println(); // Pula para a próxima linha após imprimir os asteriscos
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+// Exercicio 10 
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário o número de linhas
+        System.out.print("Digite o número de linhas (N): ");
+        int N = scanner.nextInt();
+
+        // Verifica se o número é positivo
+        if (N <= 0) {
+            System.out.println("Por favor, insira um número inteiro positivo.");
+        } else {
+            // Loop para imprimir a pirâmide de números
+            for (int i = 1; i <= N; i++) { // Controla o número de linhas
+                // Imprime os espaços em branco para alinhar a pirâmide
+                for (int j = 1; j <= N - i; j++) {
+                    System.out.print("  ");
+                }
+
+                // Imprime os números crescentes
+                for (int j = 1; j <= i; j++) {
+                    System.out.print(j + " ");
+                }
+
+                // Imprime os números decrescentes
+                for (int j = i - 1; j >= 1; j--) {
+                    System.out.print(j + " ");
+                }
+
+                // Pula para a próxima linha após imprimir a linha atual
+                System.out.println();
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+
+
 
 
 
